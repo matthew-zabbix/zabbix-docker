@@ -252,6 +252,8 @@ services:
    - MYSQL_ROOT_PASSWORD
   user: root
   stop_grace_period: 1m
+  security_opt:
+    - seccomp:unconfined
   networks:
    zbx_net_backend:
     aliases:

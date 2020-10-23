@@ -55,6 +55,7 @@ services:
    - --default-authentication-plugin=mysql_native_password
   volumes:
    - ./zbx_env/var/lib/mysql:/var/lib/mysql:rw
+   - ./my.cnf:/etc/mysql/my.cnf:rw
   env_file:
    - .env_db_mysql
   secrets:
